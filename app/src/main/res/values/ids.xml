@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="recyclerView" type="id">layoyt</item>
+    <item name="adapter" type="id">layout</item>
+    <item name="rv_nots" type="id">layout</item>
+</resources>

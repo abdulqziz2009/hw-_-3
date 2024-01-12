@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/ser"
+    tools:context=".MainActivity">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="67dp"
+        app:cardCornerRadius="200dp"
+        app:cardElevation="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+
+        <SearchView
+            android:layout_width="320dp"
+            android:layout_height="65dp"
+            android:background="@color/white" />
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/mol"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:icon="@drawable/sort_16px"
+        app:iconSize="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        tools:ignore="MissingConstraints" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="10dp"
+
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_image2"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/image">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/title_tit2"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="12dp"
+            android:text="Title"
+            android:textSize="23dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/des_des2"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="45dp"
+            android:text="Description"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/date_date2"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="280dp"
+            android:layout_marginTop="70dp"
+            android:text="22.12.2023"
+            android:textSize="24dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:id="@+id/card2"
+
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="17dp"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_image"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/image">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/title_tit"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="12dp"
+            android:text="Title"
+            android:textSize="23dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/des_des"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="45dp"
+            android:text="Description"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/date_date"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="280dp"
+            android:layout_marginTop="70dp"
+            android:text="22.12.2023"
+            android:textSize="24dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="17dp"
+        app:cardCornerRadius="24dp"
+        android:id="@+id/card3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card2"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_image3"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/image">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/title_tit3"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="12dp"
+            android:text="Title"
+            android:textSize="23dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/des_des3"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="45dp"
+            android:text="Description"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/date_date3"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="280dp"
+            android:layout_marginTop="70dp"
+            android:text="22.12.2023"
+            android:textSize="24dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="17dp"
+        app:cardCornerRadius="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/card3"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/img_image4"
+            android:layout_width="115dp"
+            android:layout_height="115dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/image">
+
+        </ImageView>
+
+        <TextView
+            android:id="@+id/title_tit4"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="12dp"
+            android:text="Title"
+            android:textSize="23dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/des_des4"
+            android:layout_width="155dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="140dp"
+            android:layout_marginTop="45dp"
+            android:text="Description"
+            android:textSize="24dp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/date_date4"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="280dp"
+            android:layout_marginTop="70dp"
+            android:text="22.12.2023"
+            android:textSize="24dp">
+
+        </TextView>
+
+    </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_add"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_margin="20dp"
+        android:backgroundTint="@color/mol"
+        android:contentDescription="@string/app_name"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        app:cornerRadius="200dp"
+        app:icon="@drawable/plus_24px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
