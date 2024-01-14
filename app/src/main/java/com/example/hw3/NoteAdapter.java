@@ -11,6 +11,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class NoteAdapter extends RecyclerView.Adapter {
@@ -21,9 +23,22 @@ public class NoteAdapter extends RecyclerView.Adapter {
         this.inflater = LayoutInflater.from(context);
     }
 
-    public void addNote(Note note){
-        list.add(note);
-        notifyDataSetChanged();
+    public void chagenNote(Note note , int position){
+        list.set(position,note);
+        notifyItemChanged(position);
+    }
+    public List <Note> getList(){return  list;}
+    public void  sortNotes(int position){
+        Collections.sort(list, new Comparator<Note>() {
+            @Override
+            public int compare(Note o1, Note o2) {
+                return o1.getTitle().compareToIgnoreCase(o2.getTitle());
+            }
+        });
+        notifyDataSetChanged(position);
+    }
+
+    private void notifyDataSetChanged(int position) {
     }
 
     @NonNull
@@ -36,7 +51,7 @@ public class NoteAdapter extends RecyclerView.Adapter {
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         if (list.get(position) != null) {
-            holder.onBind(list.get(position));
+            holder.notify();
         }
 
 

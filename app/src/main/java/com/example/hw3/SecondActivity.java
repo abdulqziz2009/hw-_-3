@@ -1,53 +1,51 @@
 package com.example.hw3;
 
-import static com.example.hw3.R.layout.activity_main2;
-
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.PersistableBundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import java.io.Serializable;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.Locale;
-
 public class SecondActivity extends AppCompatActivity {
-    private Button btnsave;
-    private EditText title, desc;
+    private ImageView image_add;
+
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        initView();
+        image_add = findViewById(R.id.img_add);
 
-    }
-    private void initView(){
-        btnsave = findViewById(R.id.btn_add_seacon);
-        title = findViewById(R.id.title_et);
-        desc = findViewById(R.id.description_et);
-    }
-    private void initListener(){
-        btnsave.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                String noteTitle = title.getText().toString();
-                String noteDesc = desc.getText().toString();
-                Date d = Calendar.getInstance().getTime();
-                SimpleDateFormat df = new SimpleDateFormat("dd-MMM-yyyy", Locale.getDefault());
-                String noteDate = df + "/" + d;
-                Note note = new Note(noteTitle,noteDate,noteDesc,0);
-                Intent i = new Intent(SecondActivity.this, MainActivity.class);
-                i.putExtra("note", (Serializable) note);
-                startActivity(i);
-            }
-        });
-    }
 
+
+
+
+
+
+        image_add.setOnClickListener(v -> {
+
+
+            Intent photoPickerIntent = new Intent(Intent.ACTION_PICK);
+            photoPickerIntent.setType("image/*");
+            final int SELECT_PHOTO = 1234;
+            startActivityForResult(photoPickerIntent, SELECT_PHOTO);
+
+
+    });
+        };
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
+        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+        switch(requestCode) {
+            case 1234:
+                if(resultCode == RESULT_OK){
+
+                    Uri selectedImage = imageReturnedIntent.getData();
+                    ImageView photoRegistration = (ImageView) findViewById(R.id.img_add);
+                    photoRegistration.setImageURI(selectedImage);
+
+                }
+        }
+    }
 }
